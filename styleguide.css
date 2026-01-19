@@ -262,12 +262,11 @@ h6 {
 
     /* basic button */
     .knopje {
-        background-color: var(--torenOranje);
-        color: #ffffff;
-        border: 0px solid white;
-        border-radius: 100px;
-        padding: 0.7em 1em;
-        font-weight: 400;
+        background-color: var(--tertiaryAccentColor);
+        color: var(--primaryColor);
+        border-radius: 3px;
+        margin: 100px;
+        size: 30em;
         cursor: pointer;
         align-self: flex-start;
         text-decoration: none;

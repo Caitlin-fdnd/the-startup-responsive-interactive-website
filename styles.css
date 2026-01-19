@@ -1,7 +1,6 @@
-/* Reset / basis */
 * {
     margin: 0;
-    padding: 0;
+    padding: .1em;
     line-height: 140%;
     box-sizing: border-box;
 }
@@ -13,25 +12,19 @@ body {
     gap: 1rem;
 }
 
-/* =====================
-   NAVBAR (bovenste balk)
-===================== */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: rgb(223, 223, 223);
 }
 
-/* Consument / Zakelijk / menu */
 .navbar+a,
 .navbar+a+a,
 .navbar+a+a+button {
     display: inline-flex;
 }
 
-/* =====================
-   HEADER
-===================== */
 .header {
     display: grid;
     grid-template-columns: auto 1fr auto;
@@ -39,114 +32,176 @@ body {
     gap: 0.5rem;
 }
 
-.logo-img {
-    width: 32px;
-    height: auto;
+.buttonImg {
+    height: 2em;
+    aspect-ratio: 1/1;
 }
 
-/* =====================
-   HERO TEKST
-===================== */
+#buyImg {
+    border: none;
+    height: 3em;
+    background-image: url("assets/winkelmandje.png");
+    background-repeat: no-repeat;
+    background-size: 3em auto;
+
+}
+
+
 h1,
 h2 {
     margin: 0 1rem;
 }
 
-/* =====================
-   SELECTIE MENU
-===================== */
+
 .selectionMenu {
+    max-width: 420px;
+    margin: 2rem auto;
+}
+
+/* Tabs container */
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    background: #f0f1f5;
+    padding: 0.75rem;
+    border-radius: 14px 14px 0 0;
+}
+
+/* Tab buttons */
+.tabBtn {
+    flex: 1;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 0.25rem;
+    border-radius: 10px;
+    color: #5f6fff;
+    font-size: 0.8rem;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    align-items: center;
+    gap: 0.25rem;
 }
 
-/* Lees meer + link */
-.selectionMenu>a {
-    width: fit-content;
+.tabBtn span {
+    font-size: 0.75rem;
 }
 
-/* Knoppen rij */
-.selectionMenu>button {
-    width: 100%;
+.tabBtn:hover {
+    background: rgba(95, 111, 255, 0.12);
 }
 
-/* =====================
-   TAB MENU (Volg / Versturen / etc.)
-===================== */
-.selectionMenu>button {
+/* Active tab */
+.tabBtn.active {
+    background: #ffffff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    font-weight: bold;
+}
+
+/* Card */
+.card {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* Sections */
+.card section {
+    display: none;
+}
+
+.card section.active {
     display: block;
 }
 
-/* =====================
-   VOLG MENU
-===================== */
-.volgMenu {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.75rem;
+/* Headings */
+.card h3 {
+    color: #ff7a00;
+    margin-bottom: 1rem;
 }
 
-/* =====================
-   VERSTUREN MENU
-===================== */
-.versturenMenu {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.75rem;
+/* Labels */
+.card label {
+    display: block;
+    font-size: 0.8rem;
+    color: #333;
+    margin-bottom: 0.25rem;
 }
 
-/* =====================
-   LOCATIE MENU
-===================== */
-.locatieMenu {
-    display: flex;
-}
-
-.locatieMenu input {
+/* Inputs & selects */
+.card input,
+.card select {
     width: 100%;
+    padding: 0.75rem 0.9rem;
+    margin-bottom: 1rem;
+    border: 1px solid #d6d9e5;
+    border-radius: 10px;
+    font-size: 0.9rem;
 }
 
-/* =====================
-   POSTCODE MENU
-===================== */
-.postcodeMenu {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
+.card input:focus,
+.card select:focus {
+    outline: none;
+    border-color: #5f6fff;
+    box-shadow: 0 0 0 2px rgba(95, 111, 255, 0.15);
 }
 
-/* =====================
-   MAIN CONTENT
-===================== */
+/* Primary button */
+.primaryBtn {
+    width: 100%;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 12px;
+    background: #5f6fff;
+    color: #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.primaryBtn:hover {
+    background: #4b59e6;
+}
+
+/* Links under buttons */
+.card a {
+    display: block;
+    text-align: center;
+    margin-top: 0.75rem;
+    color: #5f6fff;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
 .main {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1rem;
 }
 
-/* Zoekveld */
 .searchInput {
     width: 100%;
 }
 
-/* =====================
-   GEKLEURDE ARTIKELEN
-===================== */
+
 .colouredArticle {
+    width: 90%;
+    max-width: 400px;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 120px;
 }
 
 .colouredArticle a {
     align-self: flex-start;
 }
 
-/* =====================
-   ALGEMENE INPUTS
-===================== */
 input,
 select,
 button {
