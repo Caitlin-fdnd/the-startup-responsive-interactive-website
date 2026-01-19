@@ -30,6 +30,12 @@ body {
     grid-template-columns: auto 1fr auto;
     align-items: center;
     gap: 0.5rem;
+
+    H1 {
+        font-size: var(--font-size-h1);
+        font-weight: var(--font-weight-bold);
+        width: 3em;
+    }
 }
 
 .buttonImg {
@@ -47,12 +53,6 @@ body {
 }
 
 
-h1,
-h2 {
-    margin: 0 1rem;
-}
-
-
 .selectionMenu {
     max-width: 80%;
     margin: 2rem auto;
@@ -62,50 +62,48 @@ h2 {
     }
 }
 
-/* Tabs container */
 .tabs {
     display: flex;
     justify-content: space-between;
     background: #f0f1f5;
     padding: 0.75rem;
     border-radius: 2px;
-}
 
-.tabBtn {
-    flex: 1;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem 0.25rem;
-    border-radius: 2px;
-    color: #5f6fff;
-    font-size: 0.8rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.25rem;
 
-    span {
-        font-size: 0.75rem;
-    }
+    .tabBtn {
+        flex: 1;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0.5rem 0.25rem;
+        border-radius: 2px;
+        color: #5f6fff;
+        font-size: 0.8rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.25rem;
 
-    &:hover {
-        background: rgba(95, 111, 255, 0.12);
-    }
+        span {
+            font-size: 0.75rem;
+        }
 
-    /* Active tab */
-    .active {
-        background: #ffffff;
-        font-weight: bold;
-        margin-bottom: -1.4em;
+        &:hover {
+            background: rgba(95, 111, 255, 0.12);
+        }
 
-        @media only screen and (min-width: 630px) {
-            background: #f9f9f9;
+        &.active {
+            background: #ffffff;
+            font-weight: bold;
+            margin-bottom: -1.4em;
+
+            @media only screen and (min-width: 630px) {
+                background: #f9f9f9;
+            }
         }
     }
 }
 
-/* Card */
 .card {
     background: #ffffff;
     padding: 1.5rem;
@@ -115,50 +113,62 @@ h2 {
     @media only screen and (min-width: 630px) {
         background: #f9f9f9;
     }
+
+
+    section {
+        display: none;
+
+
+        &.active {
+            display: block;
+        }
+    }
+
+    h3 {
+        color: #ff7a00;
+        margin-bottom: 1rem;
+    }
+
+    label {
+        display: block;
+        font-size: 0.8rem;
+        color: #333;
+        margin-bottom: 0.25rem;
+    }
+
+    input,
+    select {
+        width: 100%;
+        padding: 0.75rem 0.9rem;
+        margin-bottom: 1rem;
+        border: 1px solid #d6d9e5;
+        border-radius: 10px;
+        font-size: 0.9rem;
+
+
+        &:focus,
+        &:focus {
+            outline: none;
+            border-color: #5f6fff;
+            box-shadow: 0 0 0 2px rgba(95, 111, 255, 0.15);
+        }
+    }
+
+    a {
+        display: block;
+        text-align: center;
+        margin-top: 0.75rem;
+        color: #5f6fff;
+        font-size: 0.9rem;
+        text-decoration: none;
+    }
+
+
+    a:hover {
+        text-decoration: underline;
+    }
 }
 
-/* Sections */
-.card section {
-    display: none;
-}
-
-.card section.active {
-    display: block;
-}
-
-/* Headings */
-.card h3 {
-    color: #ff7a00;
-    margin-bottom: 1rem;
-}
-
-/* Labels */
-.card label {
-    display: block;
-    font-size: 0.8rem;
-    color: #333;
-    margin-bottom: 0.25rem;
-}
-
-/* Inputs & selects */
-.card input,
-.card select {
-    width: 100%;
-    padding: 0.75rem 0.9rem;
-    margin-bottom: 1rem;
-    border: 1px solid #d6d9e5;
-    border-radius: 10px;
-    font-size: 0.9rem;
-}
-
-.card input:focus,
-.card select:focus {
-    outline: none;
-    border-color: #5f6fff;
-    box-shadow: 0 0 0 2px rgba(95, 111, 255, 0.15);
-}
-
-/* Primary button */
 .primaryBtn {
     width: 100%;
     padding: 0.9rem;
@@ -174,15 +184,6 @@ h2 {
     background: #4b59e6;
 }
 
-/* Links under buttons */
-.card a {
-    display: block;
-    text-align: center;
-    margin-top: 0.75rem;
-    color: #5f6fff;
-    font-size: 0.9rem;
-    text-decoration: none;
-}
 
 .card a:hover {
     text-decoration: underline;
@@ -195,22 +196,52 @@ h2 {
     gap: 1rem;
 }
 
+h3 {
+    align-self: center;
+    text-align: center;
+}
+
 .searchInput {
-    width: 100%;
+    width: 30%;
+    height: 3em;
+    align-self: center;
+    border: solid 1px;
+    border-radius: 3px;
+    background-image: url("assets/Searchbutton.png");
+    background-size: 2.9em auto;
+    background-repeat: no-repeat;
+    background-position: 25.4em center;
+    padding-left: 5px;
 }
 
 
-.colouredArticle {
-    width: 90%;
-    max-width: 400px;
 
+.colouredArticles {
     display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: space-between;
-}
+    flex-direction: column;
+    gap: 2em;
 
-.colouredArticle a {
-    align-self: flex-start;
+    @media only screen and (min-width: 630px) {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .colouredArticle {
+        width: 90%;
+        max-width: 300px;
+        height: 400px;
+        background-color: #1d2d6d;
+        border-radius: 2px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+
+
+        a {
+            align-self: flex-start;
+        }
+
+    }
 }
 
 input,

@@ -6,15 +6,6 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: "buurtcampus";
-}
-
 :root {
     /* Variabelen kleuren */
     --primaryAccentColor: hsl(226, 100%, 23%);
@@ -25,7 +16,7 @@ h6 {
     --textAccentColor: hsl(0, 0%, 0%);
 
     /* Variabelen Typografie */
-    --font-size-h1: 4.5rem;
+    --font-size-h1: 6.5rem;
     --font-size-h2: 1.5rem;
     --font-size-h3: 1rem;
     --font-size-p-s: 1rem;
@@ -44,20 +35,20 @@ h6 {
 
     /* Schrijf hier de verschillende stijlen, die
        gedeeld gaan worden door jullie projecten */
-    .oranje {
-        background-color: var(--primaryAccentColor);
+    .light {
+        font-weight: var(--font-weight-light);
     }
 
-    .paars-blauw {
-        background-color: var(--secundaryAccentColor);
+    .normal {
+        font-weight: var(--font-weight-normal);
     }
 
-    .mos-groen {
-        background-color: var(--tertiaryAccentColor);
+    .semibold {
+        font-weight: var(--font-weight-semibold);
     }
 
-    .zee {
-        background-color: var(--darkSecundaryAccentColor);
+    .bold {
+        font-weight: var(--font-weight-bold);
     }
 
     .modder {
@@ -260,7 +251,7 @@ h6 {
         }
     }
 
-    /* basic button */
+   /* basic button */
     .knopje {
         background-color: var(--tertiaryAccentColor);
         color: var(--primaryColor);
@@ -277,7 +268,6 @@ h6 {
         }
     }
 
-    /* Knoppen elementen */
     .link-button {
         background-color: var(--torenOranje);
         color: #ffffff;

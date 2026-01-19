@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="styleguide.css">
+    <link rel="stylesheet" href="styles.css">
     <Title> PostNL Homepagina</Title>
 
 </head>
@@ -28,79 +28,85 @@
     <H2>Verstuur het voordelig als brievenbuspakketje</H2>
 
     <a href="" class="knopje">Lees meer</a>
-    <a href="">Link</a>
+    <a href="">Link ></a>
 
     <section class="selectionMenu">
 
-    <div class="tabs">
-        <button class="tabBtn active" data-target="volgMenu">
-            📦<span>Volg je pakket</span>
-        </button>
-        <button class="tabBtn" data-target="versturenMenu">
-            ✈️<span>Versturen</span>
-        </button>
-        <button class="tabBtn" data-target="locatieMenu">
-            📍<span>Locaties</span>
-        </button>
-        <button class="tabBtn" data-target="postcodeMenu">
-            🏠<span>Postcode</span>
-        </button>
-    </div>
+        <div class="tabs">
+            <button class="tabBtn active" data-target="volgMenu">
+                📦<span>Volg je pakket</span>
+            </button>
+            <button class="tabBtn" data-target="versturenMenu">
+                ✈️<span>Versturen</span>
+            </button>
+            <button class="tabBtn" data-target="locatieMenu">
+                📍<span>Locaties</span>
+            </button>
+            <button class="tabBtn" data-target="postcodeMenu">
+                🏠<span>Postcode</span>
+            </button>
+        </div>
 
-    <!-- Content card -->
-    <div class="card">
+        <div class="card">
 
-        <section class="volgMenu active">
-            <h3>Volg je pakket</h3>
+            <section class="volgMenu active">
+                <h3>Volg je pakket</h3>
 
-            <label>Barcode of niet-thuiscode</label>
-            <input type="text" placeholder="3S of KG">
+                <label>Barcode of niet-thuiscode</label>
+                <input type="text" placeholder="3S of KG">
 
-            <label>Land van de ontvanger</label>
-            <select>
-                <option>Nederland</option>
-                <option>België</option>
-                <option>Duitsland</option>
-            </select>
+                <label>Land van de ontvanger</label>
+                <select>
+                    <option>Nederland</option>
+                    <option>België</option>
+                    <option>Duitsland</option>
+                </select>
 
-            <label>Postcode</label>
-            <input type="text" placeholder="1234AB">
+                <label>Postcode</label>
+                <input type="text" placeholder="1234AB">
 
-            <button class="primaryBtn">Zoeken</button>
-        </section>
+                <button class="primaryBtn">Zoeken</button>
+            </section>
 
-        <section class="versturenMenu">
-            <h3>Versturen</h3>
-            <select><option>Land</option></select>
-            <select><option>Postcode</option></select>
-            <select><option>Gewicht</option></select>
+            <section class="versturenMenu">
+                <h3>Versturen</h3>
+                <select>
+                    <option>Land</option>
+                </select>
+                <select>
+                    <option>Postcode</option>
+                </select>
+                <select>
+                    <option>Gewicht</option>
+                </select>
 
-            <button class="primaryBtn">Online kopen</button>
-            <a href="#">Toon tarieven</a>
-        </section>
+                <button class="primaryBtn">Online kopen</button>
+                <a href="#">Toon tarieven</a>
+            </section>
 
-        <section class="locatieMenu">
-            <h3>Locaties</h3>
-            <input type="text" placeholder="Zoek op plaats, straat of postcode">
-            <button class="primaryBtn">Zoeken</button>
-        </section>
+            <section class="locatieMenu">
+                <h3>Locaties</h3>
+                <input type="text" placeholder="Zoek op plaats, straat of postcode">
+                <button class="primaryBtn">Zoeken</button>
+            </section>
 
-        <section class="postcodeMenu">
-            <h3>Postcode</h3>
-            <input type="text" placeholder="Straat">
-            <input type="text" placeholder="Huisnummer">
-            <input type="text" placeholder="Toevoeging (optioneel)">
-            <input type="text" placeholder="Woonplaats">
-            <button class="primaryBtn">Zoeken</button>
-        </section>
+            <section class="postcodeMenu">
+                <h3>Postcode</h3>
+                <input type="text" placeholder="Straat">
+                <input type="text" placeholder="Huisnummer">
+                <input type="text" placeholder="Toevoeging (optioneel)">
+                <input type="text" placeholder="Woonplaats">
+                <button class="primaryBtn">Zoeken</button>
+            </section>
 
-    </div>
-</section>
+        </div>
     </section>
+
     <section class="main"></section>
     <H3>Ik ben opzoek naar..</H3>
     <input type="search" class="searchInput" placeholder="Zoek naar...">
 
+    <div class="colouredArticles">
     <article class="colouredArticle" id="cArticle1">
         <H4>Voorkeuren bezorging</H4>
         <a href="">Link</a>
@@ -113,5 +119,5 @@
         <H4>Nu 1 postzegel nodig?</H4>
         <a href="">Link</a>
     </article>
-
+</div>
 </body>
