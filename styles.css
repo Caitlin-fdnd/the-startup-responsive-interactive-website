@@ -54,8 +54,12 @@ h2 {
 
 
 .selectionMenu {
-    max-width: 420px;
+    max-width: 80%;
     margin: 2rem auto;
+
+    @media only screen and (min-width: 630px) {
+        width: 90%;
+    }
 }
 
 /* Tabs container */
@@ -64,46 +68,53 @@ h2 {
     justify-content: space-between;
     background: #f0f1f5;
     padding: 0.75rem;
-    border-radius: 14px 14px 0 0;
+    border-radius: 2px;
 }
 
-/* Tab buttons */
 .tabBtn {
     flex: 1;
     background: none;
     border: none;
     cursor: pointer;
     padding: 0.5rem 0.25rem;
-    border-radius: 10px;
+    border-radius: 2px;
     color: #5f6fff;
     font-size: 0.8rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.25rem;
-}
 
-.tabBtn span {
-    font-size: 0.75rem;
-}
+    span {
+        font-size: 0.75rem;
+    }
 
-.tabBtn:hover {
-    background: rgba(95, 111, 255, 0.12);
-}
+    &:hover {
+        background: rgba(95, 111, 255, 0.12);
+    }
 
-/* Active tab */
-.tabBtn.active {
-    background: #ffffff;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    font-weight: bold;
+    /* Active tab */
+    .active {
+        background: #ffffff;
+        font-weight: bold;
+        margin-bottom: -1.4em;
+
+        @media only screen and (min-width: 630px) {
+            background: #f9f9f9;
+        }
+    }
 }
 
 /* Card */
 .card {
     background: #ffffff;
     padding: 1.5rem;
-    border-radius: 0 0 16px 16px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    border-radius: 2px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+
+    @media only screen and (min-width: 630px) {
+        background: #f9f9f9;
+    }
 }
 
 /* Sections */
