@@ -1,0 +1,154 @@
+/* Reset / basis */
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 140%;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* =====================
+   NAVBAR (bovenste balk)
+===================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Consument / Zakelijk / menu */
+.navbar+a,
+.navbar+a+a,
+.navbar+a+a+button {
+    display: inline-flex;
+}
+
+/* =====================
+   HEADER
+===================== */
+.header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo-img {
+    width: 32px;
+    height: auto;
+}
+
+/* =====================
+   HERO TEKST
+===================== */
+h1,
+h2 {
+    margin: 0 1rem;
+}
+
+/* =====================
+   SELECTIE MENU
+===================== */
+.selectionMenu {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Lees meer + link */
+.selectionMenu>a {
+    width: fit-content;
+}
+
+/* Knoppen rij */
+.selectionMenu>button {
+    width: 100%;
+}
+
+/* =====================
+   TAB MENU (Volg / Versturen / etc.)
+===================== */
+.selectionMenu>button {
+    display: block;
+}
+
+/* =====================
+   VOLG MENU
+===================== */
+.volgMenu {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+}
+
+/* =====================
+   VERSTUREN MENU
+===================== */
+.versturenMenu {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+}
+
+/* =====================
+   LOCATIE MENU
+===================== */
+.locatieMenu {
+    display: flex;
+}
+
+.locatieMenu input {
+    width: 100%;
+}
+
+/* =====================
+   POSTCODE MENU
+===================== */
+.postcodeMenu {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+}
+
+/* =====================
+   MAIN CONTENT
+===================== */
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Zoekveld */
+.searchInput {
+    width: 100%;
+}
+
+/* =====================
+   GEKLEURDE ARTIKELEN
+===================== */
+.colouredArticle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 120px;
+}
+
+.colouredArticle a {
+    align-self: flex-start;
+}
+
+/* =====================
+   ALGEMENE INPUTS
+===================== */
+input,
+select,
+button {
+    width: 100%;
+}
