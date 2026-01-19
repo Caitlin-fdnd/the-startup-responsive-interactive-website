@@ -1,0 +1,298 @@
+/* We gebruiken hier Cascade layers, wat mogelijke problemen met Specificiteit voorkomt
+   https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers
+   https://css-tricks.com/css-cascade-layers/ */
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "buurtcampus";
+}
+
+:root {
+    /* Variabelen kleuren */
+    --primaryAccentColor: hsl(226, 100%, 23%);
+    --secundaryAccentColor: hsl(26, 100%, 48%);
+    --tertiaryAccentColor: hsl(240, 100%, 69%);
+    --darkSecundaryAccentColor: hsl(17, 100%, 42%);
+    --primaryColor: hsl(0, 0%, 100%);
+    --textAccentColor: hsl(0, 0%, 0%);
+
+    /* Variabelen Typografie */
+    --font-size-h1: 4.5rem;
+    --font-size-h2: 1.5rem;
+    --font-size-h3: 1rem;
+    --font-size-p-s: 1rem;
+    --font-size-p-m: 1.3rem;
+    --font-size-p-l: 1.5rem;
+    --font-size-p-xl: 2rem;
+
+    --font-weight-light: 400;
+    --font-weight-normal: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 900;
+}
+
+
+@layer styleguide {
+
+    /* Schrijf hier de verschillende stijlen, die
+       gedeeld gaan worden door jullie projecten */
+    .oranje {
+        background-color: var(--primaryAccentColor);
+    }
+
+    .paars-blauw {
+        background-color: var(--secundaryAccentColor);
+    }
+
+    .mos-groen {
+        background-color: var(--tertiaryAccentColor);
+    }
+
+    .zee {
+        background-color: var(--darkSecundaryAccentColor);
+    }
+
+    .modder {
+        background-color: var(--primaryColor);
+    }
+
+    .lucht-blauw {
+        background-color: var(--textAccentColor);
+    }
+
+    /* Typografie */
+    .heading-1 {
+        font-size: 28pt;
+        font-family: "Arial";
+        color: var(--primaryAccentColor);
+    }
+
+
+    .heading-2 {
+        font-size: 18pt;
+        font-family: "Arial";
+        color: var(--primaryAccentColor);
+    }
+
+    .heading-3 {
+        font-size: 12pt;
+        font-family: "Arial";
+        color: var(--primaryAccentColor);
+    }
+
+    .heading-4 {
+        font-size: 10pt;
+        font-family: "Arial";
+        color: var(--primaryAccentColor);
+    }
+
+    .heading-5 {
+        font-size: 10pt;
+        font-family: "Arial";
+        color: var(--primaryAccentColor);
+    }
+
+    .heading-6 {
+        font-size: 10pt;
+        font-family: "Arial";
+        color: var(--primaryAccentColor);
+    }
+
+    .alinea-tekst {
+        line-height: 1.4;
+        font-size: 1em;
+    }
+
+    /* Formulier elementen */
+    .inputs {
+        border-width: 0.1rem;
+        border-color: var(--textAccentColor);
+        border-style: solid;
+        padding-left: 10px;
+    }
+
+
+
+    .labels-1 {
+
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .text-area {
+        border-width: 0.1rem;
+        border-color: var(--textAccentColor);
+        padding-left: 10px;
+    }
+
+    .labels-textarea {
+
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+
+        &:active {
+            border-color: var(--zee);
+        }
+
+    }
+
+    .label-search-input {
+
+        appearance: none;
+        font-size: 1em;
+        border-color: var(--textAccentColor);
+        border-style: solid;
+        border-width: 0.1em;
+        width: 2.75em;
+        padding-left: 1.6em;
+        background-image: url("assets/zoek-knop.png");
+        background-size: 1.4em auto;
+        background-repeat: no-repeat;
+        background-position: .550em center;
+        transition: all .2s .2s ease-in, width.6s;
+
+        &::placeholder {
+            font-style: italic;
+        }
+
+        &:focus,
+        &:active,
+        &:not(:placeholder-shown) {
+            background-image: url("assets/zoek-knop2.png");
+            outline-color: var(--zee);
+            outline-width: 0.9em;
+            height: 1.8em;
+            width: 30%;
+            background-size: 1em auto;
+            background-position: .475em center;
+            transition: all .3s, width .5s;
+        }
+    }
+
+    .label-email-input {
+
+        appearance: none;
+        font-size: 1em;
+        border-radius: 100px;
+        border-color: var(--torenOranje);
+        border-style: solid;
+        border-width: 0.2em;
+        height: 1.5em;
+        transition: 0.5s;
+        padding-left: 2em;
+        background-image: url("assets/mail-knop.png");
+        background-size: 1.4em auto;
+        background-repeat: no-repeat;
+        background-position: .550em center;
+
+        &::placeholder {
+            font-style: italic;
+            padding-left: 3px;
+        }
+
+        &:focus,
+        &:active {
+            background-image: url("assets/mail-knop2.png");
+            outline-color: var(--zee);
+            outline-offset: -0.1em;
+            outline-width: 0.5em;
+            height: 2em;
+        }
+    }
+
+    /* Radio option buttons */
+    .option-1,
+    .option-2,
+    .option-3 {
+        cursor: pointer;
+
+    }
+
+    input[type=radio] {
+        cursor: pointer;
+        accent-color: var(--torenOranje);
+    }
+
+    /* Checkbox */
+    .check-box-1,
+    .check-box-2,
+    .check-box-3 {
+        cursor: pointer;
+
+    }
+
+    input[type=checkbox] {
+        cursor: pointer;
+        accent-color: var(--torenOranje);
+    }
+
+    /* Range slider */
+    .label-range-input {
+        accent-color: var(--torenOranje);
+        cursor: pointer;
+    }
+
+    /* submit knop */
+    .input-submit {
+        background-color: var(--torenOranje);
+        color: #ffffff;
+        border: 0 solid #ffffff;
+        border-radius: 100px;
+        padding: 0.7em 1em;
+        font-weight: 400;
+        cursor: pointer;
+        align-self: flex-start;
+        text-decoration: none;
+
+        &:hover {
+            background-color: var(--modder);
+            transition: background-color 0.5s;
+        }
+    }
+
+    /* basic button */
+    .knopje {
+        background-color: var(--torenOranje);
+        color: #ffffff;
+        border: 0px solid white;
+        border-radius: 100px;
+        padding: 0.7em 1em;
+        font-weight: 400;
+        cursor: pointer;
+        align-self: flex-start;
+        text-decoration: none;
+        transition: filter 0.6s;
+
+        &:hover {
+            filter: brightness(1.2);
+        }
+    }
+
+    /* Knoppen elementen */
+    .link-button {
+        background-color: var(--torenOranje);
+        color: #ffffff;
+        border: 0px solid #ffffff;
+        border-radius: 100px;
+        padding: 1em 2em;
+        font-weight: 600;
+        cursor: pointer;
+        align-self: flex-start;
+        text-decoration: none;
+        transition: filter 0.6s;
+
+        &:hover {
+            filter: brightness(1.2);
+        }
+    }
+}
