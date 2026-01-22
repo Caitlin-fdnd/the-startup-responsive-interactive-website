@@ -12,38 +12,58 @@
 
 <body>
     <section class="navbar">
-        <a href="">Consument</a>
-        <a href="">Zakelijk</a>
+        <div class="navTabs">
+            <a href="index.html" class="tab active">Consument</a>
+            <a href="#" class="tab">Zakelijk</a>
+        </div>
+
         <button class="buttonImg" id="buyImg"></button>
     </section>
 
-    <section class="header"></section>
-    <a href="index.html">
-        <img src="assets/🟠 Logo.png" alt="logo" class="buttonImg" id="logoImg">
-    </a>
-    <p>Inloggen</p>
-    <img src="assets/🍔 Hamburger.png" alt="hamburger menu" class="buttonImg" id="hamburgerImg">
+    <section class="header">
+        <a href="index.html" class="logoWrap">
+            <img src="assets/🟠 Logo.png" alt="logo" id="logoImg">
+        </a>
+
+        <div class="headerButtons">
+            <button class="dropdownbtn">Versturen V</button>
+            <button class="dropdownbtn">Ontvangen V</button>
+            <button class="dropdownbtn">Webshop V</button>
+            <button class="dropdownbtn">Service & contact</button>
+        </div>
+
+        <a href="#" class="loginLink">Inloggen</a>
+        <img src="assets/🍔 Hamburger.png" alt="hamburger menu" id="hamburgerImg">
+
+    </section>
 
     <H1>Grenzeloos groeien met je webwinkel</H1>
     <H2>Verstuur het voordelig als brievenbuspakketje</H2>
 
     <a href="" class="knopje">Lees meer</a>
-    <a href="">Link ></a>
+    <a href="" class="link">Link ></a>
+
+    <img src="assets/Bezorgtijd.svg" alt="Header stopwatch image" id="headerImg">
+
 
     <section class="selectionMenu">
 
         <div class="tabs">
             <button class="tabBtn active" data-target="volgMenu">
-                📦<span>Volg je pakket</span>
+                <img src="assets/pakketvolg.png" alt="Header stopwatch image" class="menuimg active">
+                <span>Volg je pakket</span>
             </button>
             <button class="tabBtn" data-target="versturenMenu">
-                ✈️<span>Versturen</span>
+                <img src="assets/versturen.png" alt="Header stopwatch image" class="menuimg">
+                <span>Versturen</span>
             </button>
             <button class="tabBtn" data-target="locatieMenu">
-                📍<span>Locaties</span>
+                <img src="assets/locaties.svg" alt="Header stopwatch image" class="menuimg">
+                <span>Locaties</span>
             </button>
             <button class="tabBtn" data-target="postcodeMenu">
-                🏠<span>Postcode</span>
+                <img src="assets/pos.svg" alt="Header stopwatch image" class="menuimg">
+                <span>Postcode</span>
             </button>
         </div>
 
@@ -107,17 +127,52 @@
     <input type="search" class="searchInput" placeholder="Zoek naar...">
 
     <div class="colouredArticles">
-    <article class="colouredArticle" id="cArticle1">
-        <H4>Voorkeuren bezorging</H4>
-        <a href="">Link</a>
-    </article>
-    <article class="colouredArticle" id="cArticle2">
-        <H4>Track & Trace wereldwijd</H4>
-        <a href="">Link</a>
-    </article>
-    <article class="colouredArticle" id="cArticle3">
-        <H4>Nu 1 postzegel nodig?</H4>
-        <a href="">Link</a>
-    </article>
-</div>
+        <article class="colouredArticle" id="cArticle1">
+            <img src="assets/plantbox.svg" alt="Plant" id="plantBox" class="cArticleIMG">
+            <H4>Voorkeuren bezorging</H4>
+            <p>Vaak op pad? Bepaal zelf waar je pakketten bezorgen:</p>
+            <footer class="cardFooter">
+                <a href="#" class="cardLink">Link ></a>
+            </footer>
+
+        </article>
+        <article class="colouredArticle" id="cArticle2">
+            <img src="assets/factory.svg" alt="Factory" id="factory" class="cArticleIMG">
+            <H4>Track & Trace wereldwijd</H4>
+            <p>Track & Trace ook op de kleinste pakketjes naar het buitenland. Naar wel 75 landen</p>
+            <footer class="cardFooter">
+                <a href="#" class="cardLink">Link ></a>
+            </footer>
+
+        </article>
+        <article class="colouredArticle" id="cArticle3">
+            <img src="assets/phonehand.svg" alt="Phone in hand" id="phoneHand" class="cArticleIMG">
+            <H4>Nu 1 postzegel nodig?</H4>
+            <p>Verstuur je brief of kaart met een postzegelcode!</p>
+            <footer class="cardFooter">
+                <a href="#" class="cardLink">Link ></a>
+            </footer>
+
+        </article>
+    </div>
+
+    <script>
+        document.querySelectorAll('.tabBtn').forEach(btn => {
+            btn.addEventListener('click', () => {
+
+                document.querySelectorAll('.tabBtn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.card section').forEach(sec => sec.classList.remove('active'));
+
+                btn.classList.add('active');
+                document.querySelector('.' + btn.dataset.target).classList.add('active');
+
+
+                const btnImg = btn.querySelector('.menuimg');
+
+                btnImg.classList.add('menuBtnAni');
+            });
+        });
+
+
+    </script>
 </body>

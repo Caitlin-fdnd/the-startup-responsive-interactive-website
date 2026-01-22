@@ -16,7 +16,7 @@
     --textAccentColor: hsl(0, 0%, 0%);
 
     /* Variabelen Typografie */
-    --font-size-h1: 6.5rem;
+    --font-size-h1: 4.3rem;
     --font-size-h2: 1.5rem;
     --font-size-h3: 1rem;
     --font-size-p-s: 1rem;
@@ -25,8 +25,8 @@
     --font-size-p-xl: 2rem;
 
     --font-weight-light: 400;
-    --font-weight-normal: 500;
-    --font-weight-semibold: 600;
+    --font-weight-normal: 550;
+    --font-weight-semibold: 800;
     --font-weight-bold: 900;
 }
 
@@ -136,39 +136,18 @@
         }
 
     }
-
-    .label-search-input {
-
-        appearance: none;
-        font-size: 1em;
-        border-color: var(--textAccentColor);
-        border-style: solid;
-        border-width: 0.1em;
-        width: 2.75em;
-        padding-left: 1.6em;
-        background-image: url("assets/zoek-knop.png");
-        background-size: 1.4em auto;
-        background-repeat: no-repeat;
-        background-position: .550em center;
-        transition: all .2s .2s ease-in, width.6s;
-
-        &::placeholder {
-            font-style: italic;
-        }
-
-        &:focus,
-        &:active,
-        &:not(:placeholder-shown) {
-            background-image: url("assets/zoek-knop2.png");
-            outline-color: var(--zee);
-            outline-width: 0.9em;
-            height: 1.8em;
-            width: 30%;
-            background-size: 1em auto;
-            background-position: .475em center;
-            transition: all .3s, width .5s;
-        }
-    }
+    .searchInput {
+    width: 30%;
+    height: 3em;
+    align-self: center;
+    border: solid 1px;
+    border-radius: 3px;
+    background-image: url("assets/Searchbutton.png");
+    background-size: 2.9em auto;
+    background-repeat: no-repeat;
+    background-position: 100% center;
+    padding-left: 5px;
+}
 
     .label-email-input {
 
@@ -251,17 +230,23 @@
         }
     }
 
-   /* basic button */
+    /* basic button */
     .knopje {
         background-color: var(--tertiaryAccentColor);
         color: var(--primaryColor);
         border-radius: 3px;
         margin: 100px;
-        size: 30em;
         cursor: pointer;
         align-self: flex-start;
         text-decoration: none;
         transition: filter 0.6s;
+
+        height: 2.7em;
+        aspect-ratio: 2 / .8;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         &:hover {
             filter: brightness(1.2);
