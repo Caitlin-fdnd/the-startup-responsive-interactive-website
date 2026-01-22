@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styleguide.css">
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
     <Title> PostNL Homepagina</Title>
 
 </head>
@@ -155,24 +156,4 @@
 
         </article>
     </div>
-
-    <script>
-        document.querySelectorAll('.tabBtn').forEach(btn => {
-            btn.addEventListener('click', () => {
-
-                document.querySelectorAll('.tabBtn').forEach(b => b.classList.remove('active'));
-                document.querySelectorAll('.card section').forEach(sec => sec.classList.remove('active'));
-
-                btn.classList.add('active');
-                document.querySelector('.' + btn.dataset.target).classList.add('active');
-
-
-                const btnImg = btn.querySelector('.menuimg');
-
-                btnImg.classList.add('menuBtnAni');
-            });
-        });
-
-
-    </script>
 </body>
