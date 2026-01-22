@@ -182,7 +182,7 @@ H2 {
     .tabs {
         display: flex;
         justify-content: space-between;
-        background: #f0f1f5;
+        background: #e7e8eb;
         padding: 0.75rem;
         border-radius: 2px;
 
@@ -210,13 +210,13 @@ H2 {
             }
 
             &.active {
-                background: #ffffff;
+                background: #f1f1f2;
                 color: var(--secundaryAccentColor);
                 font-weight: bold;
                 margin-bottom: -1.4em;
 
                 @media only screen and (min-width: 630px) {
-                    background: #f9f9f9;
+                    background: #f1f1f2;
                 }
             }
         }
@@ -246,15 +246,10 @@ H2 {
 }
 
 .card {
-    background: #ffffff;
+    background: #f1f1f2;
     padding: 1.5rem;
     border-radius: 2px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-
-    @media only screen and (min-width: 630px) {
-        background: #f9f9f9;
-    }
-
 
     section {
         display: none;
