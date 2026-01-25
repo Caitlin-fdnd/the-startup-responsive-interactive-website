@@ -12,149 +12,155 @@
 </head>
 
 <body>
-    <section class="navbar">
-        <div class="navTabs">
-            <a href="index.html" class="tab active">Consument</a>
-            <a href="#" class="tab">Zakelijk</a>
-        </div>
+    <nav>
+        <section class="navbar">
+            <div class="navTabs">
+                <a href="index.html" class="tab active">Consument</a>
+                <a href="#" class="tab">Zakelijk</a>
+            </div>
 
-        <button class="buttonImg" id="buyImg" aria-label="Winkelwagen"> </button>
-    </section>
+            <button class="buttonImg" id="buyImg" aria-label="Winkelwagen"> </button>
+        </section>
+    </nav>
 
-    <section class="header">
-        <a href="index.html" class="logoWrap">
-            <img src="assets/🟠 Logo.png" alt="PostNL" id="logoImg">
-        </a>
+    <header>
+        <section class="header">
+            <a href="index.html" class="logoWrap">
+                <img src="assets/🟠 Logo.png" alt="PostNL" id="logoImg">
+            </a>
 
-        <div class="headerButtons">
-            <button class="dropdownbtn">Versturen V</button>
-            <button class="dropdownbtn">Ontvangen V</button>
-            <button class="dropdownbtn">Webshop V</button>
-            <button class="dropdownbtn">Service & contact</button>
-        </div>
+            <div class="headerButtons">
+                <button class="dropdownbtn">Versturen V</button>
+                <button class="dropdownbtn">Ontvangen V</button>
+                <button class="dropdownbtn">Webshop V</button>
+                <button class="dropdownbtn">Service & contact</button>
+            </div>
 
-        <a href="#" class="loginLink">Inloggen</a>
-        <img src="assets/🍔 Hamburger.png" alt="hamburger menu" id="hamburgerImg">
+            <a href="#" class="loginLink">Inloggen</a>
+            <img src="assets/🍔 Hamburger.png" alt="hamburger menu" id="hamburgerImg">
 
-    </section>
-
-    <H1>Grenzeloos groeien met je webwinkel</H1>
-    <H2>Verstuur het voordelig als brievenbuspakketje</H2>
-
-    <a href="" class="knopje">Lees meer</a>
-    <a href="" class="link">Link ></a>
-
-    <img src="assets/Bezorgtijd.svg" alt="" id="headerImg">
+        </section>
 
 
-    <section class="selectionMenu">
+        <H1>Grenzeloos groeien met je webwinkel</H1>
+        <H2>Verstuur het voordelig als brievenbuspakketje</H2>
 
-        <div class="tabs">
-            <button class="tabBtn active" data-target="volgMenu">
-                <img src="assets/pakketvolg.png" alt="" class="menuimg active">
-                <span>Volg je pakket</span>
-            </button>
-            <button class="tabBtn" data-target="versturenMenu">
-                <img src="assets/versturen.png" alt="" class="menuimg">
-                <span>Versturen</span>
-            </button>
-            <button class="tabBtn" data-target="locatieMenu">
-                <img src="assets/locaties.svg" alt="" class="menuimg">
-                <span>Locaties</span>
-            </button>
-            <button class="tabBtn" data-target="postcodeMenu">
-                <img src="assets/pos.svg" alt="" class="menuimg">
-                <span>Postcode</span>
-            </button>
-        </div>
+        <a href="" class="knopje">Lees meer</a>
+        <a href="" class="link">Link ></a>
 
-        <div class="card">
+        <img src="assets/Bezorgtijd.svg" alt="" id="headerImg">
+    </header>
 
-            <section class="volgMenu active">
-                <h3>Volg je pakket</h3>
+    <main>
+        <section class="selectionMenu">
 
-                <label>Barcode of niet-thuiscode</label>
-                <input type="text" placeholder="3S of KG">
+            <div class="tabs">
+                <button class="tabBtn active" data-target="volgMenu">
+                    <img src="assets/pakketvolg.png" alt="" class="menuimg active">
+                    <span>Volg je pakket</span>
+                </button>
+                <button class="tabBtn" data-target="versturenMenu">
+                    <img src="assets/versturen.png" alt="" class="menuimg">
+                    <span>Versturen</span>
+                </button>
+                <button class="tabBtn" data-target="locatieMenu">
+                    <img src="assets/locaties.svg" alt="" class="menuimg">
+                    <span>Locaties</span>
+                </button>
+                <button class="tabBtn" data-target="postcodeMenu">
+                    <img src="assets/pos.svg" alt="" class="menuimg">
+                    <span>Postcode</span>
+                </button>
+            </div>
 
-                <label>Land van de ontvanger
+            <div class="card">
+
+                <section class="volgMenu active">
+                    <h3>Volg je pakket</h3>
+
+                    <label>Barcode of niet-thuiscode</label>
+                    <input type="text" placeholder="3S of KG">
+
+                    <label>Land van de ontvanger
+                        <select>
+                            <option>Nederland</option>
+                            <option>België</option>
+                            <option>Duitsland</option>
+                        </select>
+                    </label>
+
+                    <label>Postcode</label>
+                    <input type="text" placeholder="1234AB">
+
+                    <button class="primaryBtn">Zoeken</button>
+                </section>
+
+                <section class="versturenMenu">
+                    <h3>Versturen</h3>
                     <select>
-                        <option>Nederland</option>
-                        <option>België</option>
-                        <option>Duitsland</option>
+                        <option>Land</option>
                     </select>
-                </label>
+                    <select>
+                        <option>Postcode</option>
+                    </select>
+                    <select>
+                        <option>Gewicht</option>
+                    </select>
 
-                <label>Postcode</label>
-                <input type="text" placeholder="1234AB">
+                    <button class="primaryBtn">Online kopen</button>
+                    <a href="#">Toon tarieven</a>
+                </section>
 
-                <button class="primaryBtn">Zoeken</button>
-            </section>
+                <section class="locatieMenu">
+                    <h3>Locaties</h3>
+                    <input type="text" placeholder="Zoek op plaats, straat of postcode">
+                    <button class="primaryBtn">Zoeken</button>
+                </section>
 
-            <section class="versturenMenu">
-                <h3>Versturen</h3>
-                <select>
-                    <option>Land</option>
-                </select>
-                <select>
-                    <option>Postcode</option>
-                </select>
-                <select>
-                    <option>Gewicht</option>
-                </select>
+                <section class="postcodeMenu">
+                    <h3>Postcode</h3>
+                    <input type="text" placeholder="Straat">
+                    <input type="text" placeholder="Huisnummer">
+                    <input type="text" placeholder="Toevoeging (optioneel)">
+                    <input type="text" placeholder="Woonplaats">
+                    <button class="primaryBtn">Zoeken</button>
+                </section>
 
-                <button class="primaryBtn">Online kopen</button>
-                <a href="#">Toon tarieven</a>
-            </section>
+            </div>
+        </section>
 
-            <section class="locatieMenu">
-                <h3>Locaties</h3>
-                <input type="text" placeholder="Zoek op plaats, straat of postcode">
-                <button class="primaryBtn">Zoeken</button>
-            </section>
+        <section class="main"></section>
+        <H3>Ik ben opzoek naar..</H3>
+        <input type="search" class="searchInput" placeholder="Zoek naar...">
 
-            <section class="postcodeMenu">
-                <h3>Postcode</h3>
-                <input type="text" placeholder="Straat">
-                <input type="text" placeholder="Huisnummer">
-                <input type="text" placeholder="Toevoeging (optioneel)">
-                <input type="text" placeholder="Woonplaats">
-                <button class="primaryBtn">Zoeken</button>
-            </section>
+        <div class="colouredArticles">
+            <article class="colouredArticle" id="cArticle1">
+                <img src="assets/plantbox.svg" alt="" id="plantBox" class="cArticleIMG">
+                <H4>Voorkeuren bezorging</H4>
+                <p>Vaak op pad? Bepaal zelf waar je pakketten bezorgen:</p>
+                <footer class="cardFooter">
+                    <a href="#" class="cardLink">Link ></a>
+                </footer>
 
+            </article>
+            <article class="colouredArticle" id="cArticle2">
+                <img src="assets/factory.svg" alt="" id="factory" class="cArticleIMG">
+                <H4>Track & Trace wereldwijd</H4>
+                <p>Track & Trace ook op de kleinste pakketjes naar het buitenland. Naar wel 75 landen</p>
+                <footer class="cardFooter">
+                    <a href="#" class="cardLink">Link ></a>
+                </footer>
+
+            </article>
+            <article class="colouredArticle" id="cArticle3">
+                <img src="assets/phonehand.svg" alt="" id="phoneHand" class="cArticleIMG">
+                <H4>Nu 1 postzegel nodig?</H4>
+                <p>Verstuur je brief of kaart met een postzegelcode!</p>
+                <footer class="cardFooter">
+                    <a href="#" class="cardLink">Link ></a>
+                </footer>
+
+            </article>
         </div>
-    </section>
-
-    <section class="main"></section>
-    <H3>Ik ben opzoek naar..</H3>
-    <input type="search" class="searchInput" placeholder="Zoek naar...">
-
-    <div class="colouredArticles">
-        <article class="colouredArticle" id="cArticle1">
-            <img src="assets/plantbox.svg" alt="" id="plantBox" class="cArticleIMG">
-            <H4>Voorkeuren bezorging</H4>
-            <p>Vaak op pad? Bepaal zelf waar je pakketten bezorgen:</p>
-            <footer class="cardFooter">
-                <a href="#" class="cardLink">Link ></a>
-            </footer>
-
-        </article>
-        <article class="colouredArticle" id="cArticle2">
-            <img src="assets/factory.svg" alt="" id="factory" class="cArticleIMG">
-            <H4>Track & Trace wereldwijd</H4>
-            <p>Track & Trace ook op de kleinste pakketjes naar het buitenland. Naar wel 75 landen</p>
-            <footer class="cardFooter">
-                <a href="#" class="cardLink">Link ></a>
-            </footer>
-
-        </article>
-        <article class="colouredArticle" id="cArticle3">
-            <img src="assets/phonehand.svg" alt="" id="phoneHand" class="cArticleIMG">
-            <H4>Nu 1 postzegel nodig?</H4>
-            <p>Verstuur je brief of kaart met een postzegelcode!</p>
-            <footer class="cardFooter">
-                <a href="#" class="cardLink">Link ></a>
-            </footer>
-
-        </article>
-    </div>
+    </main>
 </body>
