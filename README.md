@@ -41,6 +41,10 @@ Ik heb mijn website getest aan de hand van de WCAG test om ervoor te zorgen dat 
 <img width="791" height="345" alt="Screenshot 2026-01-25 214414" src="https://github.com/user-attachments/assets/9f34fc2c-0027-4788-890c-1cd2d18f9435" />
 
 
+## Feedback Opdrachtgever
+In deze comment heb ik de feedback van de opdrachtgever gedocumenteerd
+https://github.com/Caitlin-fdnd/the-startup-responsive-interactive-website/issues/1#issuecomment-3797219429
+
 ## Licentie
 
 This project is licensed under the terms of the [MIT license](./LICENSE).
