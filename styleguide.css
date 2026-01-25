@@ -10,7 +10,7 @@
     /* Variabelen kleuren */
     --primaryAccentColor: hsl(226, 100%, 23%);
     --secundaryAccentColor: hsl(26, 100%, 48%);
-    --tertiaryAccentColor: hsl(240, 100%, 69%);
+    --tertiaryAccentColor: #6161ff;
     --darkSecundaryAccentColor: hsl(17, 100%, 42%);
     --primaryColor: hsl(0, 0%, 100%);
     --textAccentColor: hsl(0, 0%, 0%);
