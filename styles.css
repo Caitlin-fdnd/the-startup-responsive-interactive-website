@@ -282,7 +282,6 @@ H2 {
         font-size: 0.9rem;
 
 
-        &:focus,
         &:focus {
             outline: none;
             border-color: #5f6fff;
