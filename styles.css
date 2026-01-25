@@ -45,7 +45,7 @@ body {
 
             &.active {
                 background: #ffffff;
-                color: #ff7a00;
+                color: var(--darkSecundaryAccentColor);
                 font-weight: 600;
                 margin-bottom: -2px;
             }
@@ -211,7 +211,7 @@ H2 {
 
             &.active {
                 background: #f1f1f2;
-                color: var(--secundaryAccentColor);
+                color: var(--darkSecundaryAccentColor);
                 font-weight: bold;
                 margin-bottom: -1.4em;
 
@@ -261,7 +261,7 @@ H2 {
     }
 
     h3 {
-        color: #ff7a00;
+        color: var(--darkSecundaryAccentColor);
         margin-bottom: 1rem;
     }
 
